@@ -1,0 +1,13 @@
+<div style="margin: 20px; font-family: Arial;">
+  <ul *ngIf="products.length > 0; else noProducts">
+    <li *ngFor="let product of products"
+        (click)="onProductClick(product)"
+        style="cursor: pointer; color: blue;">
+      {{ product }}
+    </li>
+  </ul>
+
+  <ng-template #noProducts>
+    <p>No products available</p>
+  </ng-template>
+</div>

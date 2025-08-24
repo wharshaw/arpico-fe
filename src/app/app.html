@@ -1,0 +1,19 @@
+<app-counter-component></app-counter-component>
+
+<h2>Available Products</h2>
+<app-product-list-component (productSelected)="onProductSelected($event)"></app-product-list-component>
+<div *ngIf="selectedProduct">
+  <p>You selected: {{ selectedProduct }}</p>
+</div>
+
+<app-product-display-component></app-product-display-component>
+
+
+<nav>
+  <a routerLink="/products">Products</a> | 
+  <a routerLink="/counter">Counter</a>
+</nav>
+
+<hr>
+
+<router-outlet></router-outlet>
